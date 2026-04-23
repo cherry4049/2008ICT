@@ -1,0 +1,56 @@
+/* Box sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Improve body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Media elements behave nicely */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Form elements inherit font */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Buttons look consistent */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Text wrapping improvements */
+p {
+    max-width: 75ch;
+}
+
+/* Headings better wrapping */
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}

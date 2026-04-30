@@ -2,53 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renters Energy</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>RentersEnergy – [PAGE NAME]</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!-- =========================
-        SHARED HEADER START
-        DO NOT EDIT (unless agreed)
-    ========================= -->
+
+    <!-- ============================================
+         HEADER (shared across all pages)
+         Mobile: Logo + Page Title + User Icon (row)
+                Search bar below
+         Desktop: Logo + Page Title + Search + User Icon (row)
+                 Top nav below
+    ============================================ -->
     <header class="header">
-        <!-- Top row: logo (link to Home page) + title -->
-        <div class="brand">
+        <!-- Top row: Logo + Page Title + User Icon -->
+        <div class="header-top">
             <a href="index.html" class="logo-link">
-                <img src="images/logo.png" alt="Logo" class="logo">
+                <img src="images/logo.png" alt="RentersEnergy Logo" class="logo">
             </a>
-            <h1>Renters Energy</h1>
+            <h1 class="page-title">Renters Energy</h1>
+            <a href="settings.html" class="user-icon"></a>
         </div>
-
-        <!-- Bottom row: Nav links -->
-        <nav class="nav">
-            <a href="alerts.html">Alerts</a>
-            <a href="usage.html">Electricity Usage</a>
-            <a href="help.html">Contact Us</a>
-
-            <!-- Search box -->
-            <div class="search-box">
-                <input type="text" placeholder="Search">
-            </div>
-
-            <!-- User icon -->
-                <a href="settings.html" class="user-icon"></a>
-        </nav>       
+        
+        <!-- Search bar -->
+        <div class="search-area">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+        
+        <!-- Top navigation (visible on desktop only) -->
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link" data-tooltip="Go to Home Page">🏠 Home</a>
+            <a href="alerts.html" class="nav-link" data-tooltip="Go to Alerts Page">🔔 Alerts</a>
+            <a href="usage.html" class="nav-link" data-tooltip="Go to Electricity Usage Page">⚡ Electricity Usage</a>
+            <a href="settings.html" class="nav-link" data-tooltip="Go to Settings Page">⚙️ Settings</a>
+            <a href="help.html" class="nav-link" data-tooltip="Go to Help Page">❓ Help</a>
+        </nav>
     </header>
+
     
-    <!-- MAIN CONTENT START-->
+
+    <!-- ============================================
+         MAIN CONTENT
+         Each page owner adds their content here
+    ============================================ -->
     <main class="main">
-        <!-- page-specific content goes here -->
+        <div class="container">
+            <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
+            <section class="section">
+                <h2>[SECTION TITLE]</h2>
+                <div class="card">
+                    <p>Add your page content here.</p>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- ============================================
+         MOBILE BOTTOM NAVIGATION BAR
+         Visible on mobile only
+    ============================================ -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="bottom-nav-link" id="bottomNavHome">
+            <span class="bottom-nav-icon">🏠</span>
+            <span>Home</span>
+        </a>
+        <a href="alerts.html" class="bottom-nav-link" id="bottomNavAlerts">
+            <span class="bottom-nav-icon">🔔</span>
+            <span>Alerts</span>
+        </a>
+        <a href="usage.html" class="bottom-nav-link" id="bottomNavUsage">
+            <span class="bottom-nav-icon">⚡</span>
+            <span>Usage</span>
+        </a>
+        <a href="settings.html" class="bottom-nav-link" id="bottomNavSettings">
+            <span class="bottom-nav-icon">⚙️</span>
+            <span>Settings</span>
+        </a>
+        <a href="help.html" class="bottom-nav-link" id="bottomNavHelp">
+            <span class="bottom-nav-icon">❓</span>
+            <span>Help</span>
+        </a>
+    </nav>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
     <footer class="footer">
-        <p>&copy; 2026 2008ICT - Group: OL1</p>
+        <div class="container text-center">
+            <p class="small">&copy; 2026 2008ICT – Team OL1 | Renters Energy</p>
+        </div>
     </footer>
+
+    <!-- Active page highlighting (automatically highlights current page) -->
+    <script>
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        // Highlight bottom navigation
+        document.querySelectorAll('.bottom-nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+        
+        // Highlight top navigation (desktop)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    </script>
     
 </body>
 </html>

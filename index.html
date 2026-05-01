@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>RentersEnergy – [PAGE NAME]</title>
+    <title>RentersEnergy – Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -40,21 +40,110 @@
         </nav>
     </header>
 
-    
-
     <!-- ============================================
-         MAIN CONTENT
-         Each page owner adds their content here
+    MAIN CONTENT - HOME PAGE  
     ============================================ -->
     <main class="main">
+        <div class="guide-link-wrapper">
+            <a href="help.html" class="guide-link">First time user? Click for guide → 📘</a>
+        </div>
         <div class="container">
-            <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
+
+            <!-- Alerts card -->
             <section class="section">
-                <h2>[SECTION TITLE]</h2>
                 <div class="card">
-                    <p>Add your page content here.</p>
+                    <a href="alerts.html" class="card-header-link">
+                        <div class="card-header">
+                            <span>🔔</span>
+                            <h2>Alerts</h2>
+                        </div>
+                    </a>
+
+                <div class="alerts-list">
+                    <!-- New Alert (highlighted)-->
+                    <div class="alert-item-unread">
+                        <div class="alert-content">
+                            <span class="alert-badge">NEW</span>
+                            <span class="alert-title">Abnormal Usage</span>
+                        </div>
+                        <span class="alert-date">July 30, 2025</span>                        
+                    </div>
+
+                    <!-- Regular Alerts -->
+                    <div class="alert-item-read">
+                        <div class="alert-content">
+                            <span class="alert-title">Pay bill</span>
+                        </div>
+                        <span class="alert-date">June 21, 2025</span>                        
+                    </div>
+                    <!-- Regular Alert -->
+                        <div class="alert-item-read">
+                            <div class="alert-content">
+                                <span class="alert-title">Abnormal Usages</span>
+                            </div>
+                            <span class="alert-date">May 19, 2025</span>
+                        </div>
+                        
+                        <!-- Regular Alert -->
+                        <div class="alert-item-read">
+                            <div class="alert-content">
+                                <span class="alert-title">New tips for renters</span>
+                            </div>
+                            <span class="alert-date">May 10, 2025</span>
+                        </div>
+                    </div>
+
+                    <a href="alerts.html" class="inline-link" style="display: inline-block; margin-top: var(--spacing-md);">View all alerts →</a>
                 </div>
             </section>
+
+            <!---- Daily usage chart card-->
+            <section class="section">
+                <div class="card">
+                    <a href="usage.html" class="card-header-link">
+                        <span>📊</span>
+                        <h2>Daily electricity usage in current month</h2>
+                    </a>
+
+                    <div class="chart-container">
+                        <img src="images/line_chart.png" alt="Daily electricity usage line chart showing usage trends for the current month" class="chart-image">
+                    </div>
+
+                    <a href="usage.html" class="inline-link" style="display: inline-block; margin-top: var(--spacing-md);">View usage breakdowns →</a>
+                </div>
+            </section>
+
+            <!--Government support card-->
+            <section class="section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>💰 Support for Queensland renters</h2>
+                    </div>
+                    
+                    <div class="support-grid">
+                        <!-- left: EmPower Program -->
+                        <div class="support-item">
+                            <div class="support-content">
+                                <p><strong>⚡EmPower Renters</strong></p>
+                                <p>Learn to reduce bills and access rebates. Book a phone call, information session, or home visit for practical energy saving tips.</p>
+
+                                <a href="https://www.empoweringrenters.org.au" target="_blank" rel="noopener noreferrer" class="btn btn-primary support-btn">Visit EmPower Renters website →</a>
+                            </div>
+                        </div>
+
+                        <!-- right: Electricity saving tips -->
+                        <div class="support-item">                      
+                            <p><strong>📝 Electricity Saving Tips</strong></p>
+                            <ul class="tips-list">
+                                <li>💡 Use fans instead of air-con at night – save up to $50/month</li>
+                                <li>🪟 Close curtains during the day to keep heat out</li>
+                                <li>🌞 Sun-dry washing instead of using dryer</li>
+                            </ul>                            
+                        </div>
+                    </div>
+                </div>                     
+            </section>
+
         </div>
     </main>
 

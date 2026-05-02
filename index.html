@@ -18,11 +18,11 @@
     <header class="header">
         <!-- Top row: Logo + Page Title + User Icon -->
         <div class="header-top">
-            <a href="index.html" class="logo-link">
+            <a href="index.html" class="logo-link" data-tooltip="Go to Home Page">
                 <img src="images/logo.png" alt="RentersEnergy Logo" class="logo">
             </a>
             <h1 class="page-title">Renters Energy</h1>
-            <a href="settings.html" class="user-icon"></a>
+            <a href="settings.html" class="user-icon" data-tooltip="Go to Settings"></a>
         </div>
         
         <!-- Search bar -->
@@ -54,8 +54,7 @@
                 <div class="card">
                     <a href="alerts.html" class="card-header-link">
                         <div class="card-header">
-                            <span>🔔</span>
-                            <h2>Alerts</h2>
+                           <h2>🔔 Alerts</h2>
                         </div>
                     </a>
 
@@ -87,13 +86,15 @@
                         <!-- Regular Alert -->
                         <div class="alert-item-read">
                             <div class="alert-content">
-                                <span class="alert-title">New tips for renters</span>
+                                <span class="alert-title">
+                                    <a href="#new-support" class="alert-linkk">New support program for renters</a>
+                                </span>
                             </div>
                             <span class="alert-date">May 10, 2025</span>
                         </div>
                     </div>
 
-                    <a href="alerts.html" class="inline-link" style="display: inline-block; margin-top: var(--spacing-md);">View all alerts →</a>
+                    <a href="alerts.html" class="inline-link" style="display: inline-block; margin-top: var(--spacing-md);">👉 View all alerts</a>
                 </div>
             </section>
 
@@ -101,15 +102,14 @@
             <section class="section">
                 <div class="card">
                     <a href="usage.html" class="card-header-link">
-                        <span>📊</span>
-                        <h2>Daily electricity usage in current month</h2>
+                        <h2>📊 Daily electricity usage in current month</h2>
                     </a>
 
                     <div class="chart-container">
                         <img src="images/line_chart.png" alt="Daily electricity usage line chart showing usage trends for the current month" class="chart-image">
                     </div>
 
-                    <a href="usage.html" class="inline-link" style="display: inline-block; margin-top: var(--spacing-md);">View usage breakdowns →</a>
+                    <a href="usage.html" class="inline-link" style="display: inline-block; margin-top: var(--spacing-md);">👉 View usage breakdowns</a>
                 </div>
             </section>
 
@@ -123,11 +123,11 @@
                     <div class="support-grid">
                         <!-- left: EmPower Program -->
                         <div class="support-item">
-                            <div class="support-content">
+                            <div class="support-content" id="new-support">
                                 <p><strong>⚡EmPower Renters</strong></p>
                                 <p>Learn to reduce bills and access rebates. Book a phone call, information session, or home visit for practical energy saving tips.</p>
 
-                                <a href="https://www.empoweringrenters.org.au" target="_blank" rel="noopener noreferrer" class="btn btn-primary support-btn">Visit EmPower Renters website →</a>
+                                <a href="https://www.empoweringrenters.org.au" target="_blank" rel="noopener noreferrer" class="btn btn-primary support-btn">👉 Visit EmPower Renters website</a>
                             </div>
                         </div>
 

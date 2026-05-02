@@ -379,22 +379,24 @@ a {
    ============================================ */
 .footer {
     background-color: var(--bg-header);
-    padding: var(--spacing-sm) 0;
-    margin-top: var(--spacing-xs);
+    padding-top: 0;
+    padding-bottom: 1rem;
+    margin-top: 0;
     border-top: 1px solid #E5E7EB;
-    margin-bottom: 65px;
-    width: 100%;
+    margin-bottom: 70px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
 
 .footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+    width: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
 .footer p {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     color: rgb(120, 112, 112);
     font-size: clamp(0.75rem, 4vw, 1rem);
 }

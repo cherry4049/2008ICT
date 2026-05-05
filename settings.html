@@ -56,7 +56,7 @@
                         <div><strong>Email:</strong> emma@email.com</div>
                         <div><strong>Password:</strong> ********</div>
                     </div>
-                    <button class="edit-btn">Edit</button>
+                    <a href="#profileModal" class="edit-btn">Edit</a>
                 </section>
 
                 <!-- Rental Property Section -->
@@ -66,7 +66,7 @@
                         <div><strong>Rooms:</strong> 3</div>
                         <div><strong>Occupants:</strong> 3</div>
                     </div>
-                    <button class="edit-btn">Edit</button>
+                    <a href="#propertyModal" class="edit-btn">Edit</a>
                 </section>
 
                 <!-- Appliances Section -->
@@ -81,7 +81,7 @@
                         <div class="appliance-item"><strong>Garage:</strong> Water heater, Freezer</div>
                         <div class="appliance-item"><strong>Laundry:</strong> Washing machine</div>
                     </div>
-                    <button class="edit-btn">Edit</button>
+                    <a href="#appliancesModal" class="edit-btn">Edit</a>
                 </section>
 
                 <!-- Data Preferences Section -->
@@ -102,9 +102,121 @@
         </div>
     </main>
 
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Edit user profile</div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <div class="input-wrapper">
+                        <input type="text" value="Emma Chen" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <div class="input-wrapper">
+                        <input type="text" value="emma@email.com" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>New password:</label>
+                    <div class="input-wrapper">
+                        <input type="password" value="********">
+                        <span class="password-toggle">👁️</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirm new password:</label>
+                    <div class="input-wrapper">
+                        <input type="password" value="123321">
+                        <span class="password-toggle">👁️</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn-save">Save</a>
+                <a href="#" class="btn-cancel">Cancel</a>
+            </div>
+        </div>
+    </div>
 
+    
+    <div id="propertyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Edit renter property</div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Number of rooms:</label>
+                    <div class="input-wrapper">
+                        <input type="number" value="3">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Number of occupants:</label>
+                    <div class="input-wrapper">
+                        <input type="number" value="3">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn-save">Save</a>
+                <a href="#" class="btn-cancel">Cancel</a>
+            </div>
+        </div>
+    </div>
 
-
+    
+    <div id="appliancesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">Edit appliances</div>
+            <div class="modal-body">
+                
+                <div class="appliance-section">
+                    <div class="appliance-section-header">
+                        <h3>Living Room:</h3>
+                        <button class="btn-add-new">+ Add New</button>
+                    </div>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox" checked> Air conditioner</label>
+                        <label class="checkbox-item"><input type="checkbox" checked> Light (4)</label>
+                        <label class="checkbox-item"><input type="checkbox" checked> TV</label>
+                        <label class="checkbox-item"><input type="checkbox"> Phone charger</label>
+                        <label class="checkbox-item"><input type="checkbox"> Heater</label>
+                    </div>
+                </div>
+                
+                <div class="appliance-section">
+                    <div class="appliance-section-header">
+                        <h3>Kitchen:</h3>
+                        <button class="btn-add-new">+ Add New</button>
+                    </div>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox" checked> Refrigerator</label>
+                        <label class="checkbox-item"><input type="checkbox" checked> Light (2)</label>
+                        <label class="checkbox-item"><input type="checkbox" checked> Microwave</label>
+                        <label class="checkbox-item"><input type="checkbox" checked> Oven</label>
+                        <label class="checkbox-item"><input type="checkbox"> Kettle</label>
+                    </div>
+                </div>
+                
+                <div class="appliance-section">
+                    <div class="appliance-section-header">
+                        <h3>Bedroom 1:</h3>
+                        <button class="btn-add-new">+ Add New</button>
+                    </div>
+                    <div class="checkbox-list">
+                        <label class="checkbox-item"><input type="checkbox" checked> TV</label>
+                        <label class="checkbox-item"><input type="checkbox" checked> Light (2)</label>
+                        <label class="checkbox-item"><input type="checkbox" checked> Phone charger (2)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn-save">Save</a>
+                <a href="#" class="btn-cancel">Cancel</a>
+            </div>
+        </div>
+    </div>
 
     <!-- ============================================
          MOBILE BOTTOM NAVIGATION BAR
@@ -133,7 +245,9 @@
         </a>
     </nav>
 
-    <!-- ============================================
+
+
+        <!-- ============================================
          FOOTER
     ============================================ -->
     <footer class="footer">
@@ -160,6 +274,5 @@
             }
         });
     </script>
-    
 </body>
 </html>

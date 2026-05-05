@@ -543,9 +543,119 @@ a {
    10.4 PAGE-SPECIFIC STYLES
        - Settings Page Only
 ============================================ */
-.settings-section { }
-.profile-form { }
-.appliance-checkbox-group { }
+.settings-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.settings-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.settings-card h2 {
+    color: #2e7d32;
+    margin-top: 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
+.settings-card h2.uppercase {
+    text-transform: uppercase;
+}
+
+.settings-info {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.settings-info div {
+    margin-bottom: 15px;
+}
+
+.edit-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #4A9B7A;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.edit-btn:hover {
+    background-color: #3d7e62;
+}
+
+.appliances-list {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fafafa;
+}
+
+.appliance-item {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.delete-account-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-delete-account {
+    background-color: #ff1717;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-delete-account:hover {
+    background-color: #d32f2f;
+}
+
+/* Scrollbar styling for appliances */
+.appliances-list::-webkit-scrollbar {
+    width: 8px;
+}
+.appliances-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.appliances-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.appliances-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
 /* ============================================
    10.5 PAGE-SPECIFIC STYLES

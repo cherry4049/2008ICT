@@ -43,19 +43,62 @@
     
     <!-- ============================================
          MAIN CONTENT
-         Each page owner adds their content here
     ============================================ -->
     <main class="main">
         <div class="container">
-            <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
-            <section class="section">
-                <div class="card">
+            <div class="settings-container">
+                
+                <!-- Profile Section -->
+                <section class="settings-card">
+                    <h2>Profile</h2>
+                    <div class="settings-info">
+                        <div><strong>Name:</strong> Emma Chen</div>
+                        <div><strong>Email:</strong> emma@email.com</div>
+                        <div><strong>Password:</strong> ********</div>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </section>
 
-                    <p style="color: red;">[Add your page content here.]</p>
-                    <p style="color: red;">[Add your page specific css to style.css section 10.4]</p>
+                <!-- Rental Property Section -->
+                <section class="settings-card">
+                    <h2>Rental Property</h2>
+                    <div class="settings-info">
+                        <div><strong>Rooms:</strong> 3</div>
+                        <div><strong>Occupants:</strong> 3</div>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </section>
 
+                <!-- Appliances Section -->
+                <section class="settings-card">
+                    <h2 class="uppercase">APPLIANCES (by room)</h2>
+                    <div class="appliances-list">
+                        <div class="appliance-item"><strong>Living Room:</strong> Air conditioner, Television</div>
+                        <div class="appliance-item"><strong>Kitchen:</strong> Refrigerator, Microwave, Oven</div>
+                        <div class="appliance-item"><strong>Bedroom 1:</strong> Air conditioner, Fan</div>
+                        <div class="appliance-item"><strong>Bedroom 2:</strong> Fan</div>
+                        <div class="appliance-item"><strong>Bedroom 3:</strong> Air conditioner, Fan</div>
+                        <div class="appliance-item"><strong>Garage:</strong> Water heater, Freezer</div>
+                        <div class="appliance-item"><strong>Laundry:</strong> Washing machine</div>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </section>
+
+                <!-- Data Preferences Section -->
+                <section class="settings-card">
+                    <h2 class="uppercase">DATA PREFERENCES</h2>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="dataSharing" checked>
+                        <label for="dataSharing">Allow anonymous usage data for comparison</label>
+                    </div>
+                </section>
+
+                <!-- Delete Account Button -->
+                <div class="delete-account-wrapper">
+                    <button class="btn-delete-account">Delete My Account</button>
                 </div>
-            </section>
+
+            </div>
         </div>
     </main>
 

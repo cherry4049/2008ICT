@@ -521,9 +521,129 @@ a {
    10.3 PAGE-SPECIFIC STYLES
        - Usage Page Only
 ============================================ */
-.period-selector {  }
-.usage-chart { }
-.room-breakdown {  }
+.usage-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Period selector */
+.period-selector {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown-btn {
+    background: #2f6f4f;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-btn.small {
+    font-size: 12px;
+    padding: 4px 10px;
+}
+
+/* Cards */
+.usage-card h2,
+.card h2 {
+    color: #2f6f4f;
+    margin-bottom: 15px;
+}
+
+/* Usage rows */
+.usage-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.usage-row.warning {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Card header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bar charts */
+.bar-group {
+    margin-top: 10px;
+}
+
+.bar-item {
+    margin-bottom: 10px;
+}
+
+.bar-item span {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.bar {
+    background: #eee;
+    height: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    background: black;
+    height: 100%;
+}
+
+/* Alert + tips */
+.alert-text {
+    color: #cc6600;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.tips {
+    font-size: 14px;
+}
+
+.tips a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Buttons */
+.usage-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.primary-btn,
+.secondary-btn {
+    background: #2f6f4f;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.secondary-btn {
+    background: #3d8b66;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .usage-actions {
+        flex-direction: column;
+    }
+}
 
 /* ============================================
    10.4 PAGE-SPECIFIC STYLES

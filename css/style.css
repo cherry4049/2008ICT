@@ -430,6 +430,17 @@ a {
     border-radius: 0.25rem;
     padding: 2px 8px;
     text-transform: uppercase;
+    animation: gentlePulse 1s ease-in-out infinite;
+}
+@keyframes gentlePulse {
+    0%, 100% {
+        transform: scale(1);
+        background-color: var(--secondary-color);
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: #035ea3;
+    }
 }
 
 .alert-item-unread {
@@ -442,8 +453,10 @@ a {
     padding: var(--spacing-xs) var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
     border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
-
 .alert-item-read {
     display: flex;
     justify-content: space-between;
@@ -454,6 +467,21 @@ a {
     padding: var(--spacing-xs) var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
     border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.alert-item-unread:hover {
+    background-color: #ffeaa7;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.alert-item-read:hover {
+    background-color: var(--bg-page);
+    transform: scale(1.01);
+    transition: all 0.2s ease;
 }
 
 .alert-title {

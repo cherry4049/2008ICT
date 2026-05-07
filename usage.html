@@ -48,18 +48,128 @@
     ============================================ -->
     <main class="main">
         <div class="container">
-            <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
-            <section class="section">
+
+            <section class="section usage-page">
+
+                <!-- Electricity Usage Card -->
+                <div class="card">
+                    <div class="card-header">
+
+                    <h2>Electricity Usage by Period</h2>
+
+                    <!-- Period Selector -->
+                    <div class="period-selector">
+                        <select class="btn-secondary">
+                            <option>Week to Date</option>
+                            <option selected>Month to Date</option>
+                            <option>Quarter to Date</option>
+                            <option>Year to Date</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="usage-row">
+                        <span>Current estimate (this month):</span>
+                        <span>$210</span>
+                    </div>
+
+                    <div class="usage-row">
+                        <p>Last bill (last month):</p>
+                        <p>$185</p>
+                    </div>
+
+                    <div class="usage-row warning">
+                        <span>💲 Projected bill:</span>
+                        <span>$290</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Appliance Breakdown -->
+            <section class="section usage-page">
+                <div class="card">
+                    <div class="card-header">
+
+                        <h2>Appliance Breakdown</h2>
+
+                        <div class="period-selector">
+                            <select class="btn-secondary">
+                                <option>Week to Date</option>
+                                <option selected>Month to Date</option>
+                                <option>Quarter to Date</option>
+                                <option>Year to Date</option>
+                            </select>
+                        </div>
+
+                        <div class="period-selector">
+                            <select class="btn-secondary">
+                                <option selected>Living Room</option>
+                                <option>Kitchen</option>
+                                <option>Bedroom 1</option>
+                                <option>Bedroom 2</option>
+                                <option>Bedroom 3</option>
+                                <option>Garage</option>
+                                <option>Laundry</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="chart-container">
+                        <img src="images/appliance_breakdown.png" alt="Appliance Breakdown" class="chart-image">
+
+                        <p>
+                            ⚠️ Alert: Air conditioner usage is 30% higher than similar homes in Oxley.
+                        </p>
+
+                        <p class="tips">
+                            ℹ️ Why is my bill high?
+                            <a href="#tips">(click for tips)</a>
+                        </p>
+                    </div>
+            </section>
+            
+            <!-- Room Breakdown -->
+             <section class="section usage-page">
                 <div class="card">
 
-                    <p style="color: red;">[Add your page content here.]</p>
-                    <p style="color: red;">[Add your page specific css to style.css section 10.3]</p>
+                    <div class="card-header">
+
+                        <h2>Room Breakdown by Period</h2>
+
+                        <div class="period-selector">
+                            <select class="btn-secondary">
+                                <option>Week to Date</option>
+                                <option selected>Month to Date</option>
+                                <option>Quarter to Date</option>
+                                <option>Year to Date</option>
+                            </select>
+                        </div>
+                </div>
+
+                <div class="chart-container">
+                    <img src="images/room_breakdown.png" alt="Room Breakdown Image" class="chart-image">
+                </div>
+            </section>
+
+            <!-- Buttons -->
+            <section class="section">
+                <div class="button-group">
+
+                    <a href="settings.html#appliancesModal" class="btn-secondary">
+                        👉 Edit Appliances
+                    </a>
+
+                    <a href="index.html#tips" class="btn-secondary">
+                        👉 View Saving Tips
+                    </a>
 
                 </div>
             </section>
+
         </div>
     </main>
-
 
     <!-- ============================================
          MOBILE BOTTOM NAVIGATION BAR

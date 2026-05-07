@@ -549,9 +549,50 @@ a {
    10.3 PAGE-SPECIFIC STYLES
        - Usage Page Only
 ============================================ */
-.period-selector {  }
-.usage-chart { }
-.room-breakdown {  }
+.usage-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Period selector */
+.period-selector {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Cards */
+.usage-card h2,
+.card h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Usage rows */
+.usage-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0;
+}
+
+.usage-row.warning {
+    margin-top: var(--spacing-sm);
+    font-weight: bold;
+}
+
+/* Card header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin: var(--spacing-lg) 0;
+}
 
 /* ============================================
    10.4 PAGE-SPECIFIC STYLES

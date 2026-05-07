@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>RentersEnergy – [PAGE NAME]</title>
+    <title>RentersEnergy – Electricity Usage</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -42,24 +42,114 @@
 
     
 
-    <!-- ============================================
-         MAIN CONTENT
-         Each page owner adds their content here
-    ============================================ -->
-    <main class="main">
-        <div class="container">
-            <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
-            <section class="section">
-                <div class="card">
+<!-- ============================================
+     MAIN CONTENT
+============================================ -->
+<main class="main">
 
-                    <p style="color: red;">[Add your page content here.]</p>
-                    <p style="color: red;">[Add your page specific css to style.css section 10.3]</p>
+    <div class="container">
+
+        <section class="section usage-page">
+
+            <!-- Period Selector -->
+            <div class="period-selector">
+                <select class="dropdown-btn">
+                    <option>Day</option>
+                    <option>Week</option>
+                    <option selected>Month</option>
+                </select>
+            </div>
+
+            <!-- Electricity Usage Card -->
+            <div class="card usage-card">
+
+                <h2>Electricity Usage</h2>
+
+                <div class="usage-row">
+                    <span>Current estimate (this month):</span>
+                    <span>$210</span>
+                </div>
+
+                <div class="usage-row">
+                    <span>Last bill (last month):</span>
+                    <span>$185</span>
+                </div>
+
+                <div class="usage-row warning">
+                    <span>⚠️ Projected bill:</span>
+                    <span>$290</span>
+                </div>
+
+            </div>
+
+            <!-- Appliance Breakdown -->
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h2>Appliance Breakdown</h2>
+
+                    <div class="period-selector">
+                        <select class="dropdown-btn">
+                            <option selected>Living Room</option>
+                            <option>Kitchen</option>
+                            <option>Bedroom 1</option>
+                            <option>Bedroom 2</option>
+                            <option>Bedroom 3</option>
+                            <option>Garage</option>
+                            <option>Laundry</option>
+                        </select>
+                    </div>
 
                 </div>
-            </section>
-        </div>
-    </main>
 
+                <img src="images/appliance_breakdown.png" alt="Appliance Breakdown">
+
+                <p class="alert-text">
+                    ⚠️ Alert: Air conditioner usage is 30% higher than similar homes in Oxley.
+                </p>
+
+                <p class="tips">
+                    ℹ Why is my bill high?
+                    <a href="index.html">(click for tips)</a>
+                </p>
+
+            </div>
+
+            <!-- Room Breakdown -->
+            <div class="card">
+
+                <h2>Room Breakdown</h2>
+
+                <img src="images/room_breakdown.png" alt="Room Breakdown Image">
+
+            </div>
+
+            <!-- Buttons -->
+            <div class="usage-actions">
+
+                <a href="alerts.html"
+                   class="nav-link"
+                   data-tooltip="Click Here for Usage Alerts">
+                    🔔 Set Usage Alert
+                </a>
+
+                <a href="help.html"
+                   class="nav-link"
+                   data-tooltip="Click Here for Saving Tips">
+                    💲 View Saving Tips
+                </a>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+</section>
+</div>
 
     <!-- ============================================
          MOBILE BOTTOM NAVIGATION BAR

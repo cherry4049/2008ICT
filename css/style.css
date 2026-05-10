@@ -541,127 +541,231 @@ a {
        - Alerts Page Only
 ============================================ */
 
-/*First Section*/
-/*Alerts display in blocks, one column*/
-.card{
-    display: flex;
-    flex-direction: column; 
-    gap: var(--spacing-sm);
-}
-/*Each alerts overall design*/
-.alert{
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    background-color: #dcd8d8;
-    padding:var(--spacing-sm);
-    border-radius: var(--radius-lg);
-}
-.alert_lrg_tablet{
+/* ============================================
+   10.2 PAGE-SPECIFIC STYLES
+       - Alerts Page Only
+   ============================================ */
+
+/* Master Container - Desktop: side by side */
+.alerts-master-container {
     display: flex;
     flex-direction: column;
-    gap: 1vh;    
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
-/*Each alerts interior design*/
-.alert_details{
-    grid-column: 1 / 2;
-    padding: var(--spacing-xs);
-}
-.alert_actions{
-    display: flex;
-    grid-column: 2 / 3;
-    align-items: center;
-    gap: 3.4vw;
-}
-#newAlert{
-    background-color: #FFF3B0;
-}
-/*Default hidden, unless its a popup on mobile*/
-.closeButton{
-    display: none;
-}
-.alert_link{
+
+/* Alert Items */
+.alert-link-wrapper {
     text-decoration: none;
     color: inherit;
-}
-/*Scroll to the top when Alert is cicked*/
-.alert_info{
-    scroll-margin-top: 100vh;
-}
-/*Tablet mode, align more info to the right of the alerts*/
-@media screen and (min-width: 768px) {
-    #mainCard {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .alert_lrg_tablet {
-        grid-column: 1 / 2;
-    }
-
-    .alert_more_info {
-        grid-column: 2 / 3;
-        padding: 2vw;
-        position: sticky;
-        top: 0;
-    }
-
-    .alert_info {
-        display: none;
-    }
-
-    .alert_info:target {
-        display: block;
-    }
+    display: block;
 }
 
-/*New Alert Popup info - Only mobile*/
-@media screen and (max-width: 767px) {
-    .alert_info {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.5);
-        place-items: center;
-    }
-
-    .alert_info:target {
-        display: grid;
-    }
-
-    .popup_content {
-        background: white;
-        padding: 2vh 4vw;
-        border-radius: 8px;
-    }
-
-    .closeButton {
-        display: block;
-    }
+.alert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-header);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+    transition: all 0.2s ease;
 }
 
-/*Star display*/
-.star_input {
+.alert-item.new-alert {
+    background-color: var(--highlight-color);
+}
+
+.alert-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.alert-details .alert-date {
+    font-size: 0.7rem;
+    color: #6B7280;
+}
+
+.alert-details .alert-title {
+    font-weight: 500;
+}
+
+.alert-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.read-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Star Rating */
+.star-input {
     display: none;
 }
-.star_input:checked + .star {
+
+.star-label {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.star-input:checked + .star-label {
     color: gold;
 }
 
-/*Second Section*/
-.noti_settings{ 
+.star-label:hover {
+    color: #ffcc00;
+}
+
+.view-icon {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Alert Detail Panels (Right Column) */
+.alert-detail-panels {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    border: 1px solid #E5E7EB;
+    min-height: 300px;
+}
+
+.alert-info {
+    display: none;
+}
+
+.alert-info:target {
+    display: block;
+}
+
+.popup-content h3 {
+    color: var(--warning-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.popup-content p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.close-button {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.close-button:hover {
+    background-color: #035ea3;
+}
+
+/* Notification Settings */
+.notification-settings-list {
     display: flex;
     flex-direction: column;
- }
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
 
- .noti_item{
+.notification-item {
     display: flex;
     align-items: center;
- }
-.noti_method{ 
-    display: flex;
-    gap: var(--spacing-xs);
- }
+    gap: var(--spacing-sm);
+}
 
+.notification-item input {
+    width: 18px;
+    height: 18px;
+}
+
+.notification-method {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-sm);
+}
+
+.notification-method label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+}
+
+/* Desktop: Side by Side Layout */
+@media (min-width: 768px) {
+    .alerts-master-container {
+        flex-direction: row;
+    }
+    
+    .alerts-list-panel {
+        flex: 1;
+    }
+    
+    .alert-detail-panels {
+        flex: 1.5;
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+    }
+    
+    .alert-info {
+        display: none;
+    }
+    
+    .alert-info:target {
+        display: block;
+    }
+}
+
+/* Mobile: Popup Style for Alerts */
+@media (max-width: 767px) {
+    .alert-info {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+    
+    .alert-info:target {
+        display: flex;
+    }
+    
+    .popup-content {
+        background-color: var(--bg-card);
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-lg);
+        width: 90%;
+        max-width: 400px;
+        position: relative;
+    }
+    
+    .close-button {
+        display: inline-block;
+        margin-top: var(--spacing-md);
+    }
+}
 
 /* ============================================
    10.3 PAGE-SPECIFIC STYLES

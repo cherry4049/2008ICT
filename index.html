@@ -60,7 +60,7 @@
 
                     <div class="alerts-list">
                         <!-- New Alert (highlighted), links to Alerts page -->
-                        <a href="alerts.html" class="alert-item-unread">
+                        <a href="alerts.html#alert1" class="alert-item-unread">
                             <div class="alert-content">
                                 <span class="alert-badge">NEW</span>
                                 <span class="alert-title">Abnormal Usage</span>
@@ -68,7 +68,14 @@
                             <span class="alert-date">July 30, 2025</span> 
                         </a>
 
-                        <!-- Regular Alerts - shows demo message -->
+                        <!-- Regular - links to Alerts page -->
+                        <a href="alerts.html#alert2" class="alert-item-read">
+                            <div class="alert-content">
+                                <span class="alert-title">Weekly Summary</span>
+                            </div>
+                            <span class="alert-date">July 15, 2025</span>
+                        </a>
+
                         <div class="alert-item-read" onclick="return alert('Your bill is on its way. \nPlease come back next year.'); ">
                             <div class="alert-content">
                                 <span class="alert-title">Pay bill</span>
@@ -77,7 +84,7 @@
                         </div>
                     
                         <!-- Regular - links to Alerts page -->
-                        <a href="alerts.html" class="alert-item-read">
+                        <a href="alerts.html#alert4" class="alert-item-read">
                             <div class="alert-content">
                                 <span class="alert-title">Abnormal Usages</span>
                             </div>
@@ -124,7 +131,10 @@
                         <!-- left: EmPower Program -->
                         <div class="support-item">
                             <div class="support-content" id="new-support">
-                                <p><strong>⚡EmPower Renters</strong></p>
+                                <div class="support-header">
+                                    <p><strong>⚡EmPower Renters</strong></p>
+                                    <span class="alert-badge">NEW</span>
+                                </div>                                
                                 <p>Learn to reduce bills and access rebates. Book a phone call, information session, or home visit for practical energy saving tips.</p>
 
                                 <a href="https://www.empoweringrenters.org.au" target="_blank" rel="noopener noreferrer" class="btn btn-primary support-btn">👉 Visit EmPower Renters website</a>

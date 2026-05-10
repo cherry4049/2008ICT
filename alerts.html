@@ -44,174 +44,187 @@
          MAIN CONTENT
     ============================================ -->
     <main class="main">
-        <div class="container">
-
-            <!-- Alerts Card - Master Detail Layout -->
-            <div class="alerts-master-container" id="mainCard">
-                
-                <!-- Left Column: Recent Alerts List -->
-                <div class="alerts-list-panel">
-                    <h2>Recent Alerts</h2>
+    <div class="container">
+        
+        <!-- Alerts Card -->
+        <div class="card alerts-card">
+            <!-- Scrollable alerts area -->
+            <div class="alert-scrollable">
+                <div class="alerts-master-container" id="mainCard">
                     
-                    <!-- New Alert (Highlighted) -->
-                    <a href="#alert1" class="alert-link-wrapper">
-                        <div class="alert-item new-alert">
-                            <div class="alert-details">
-                                <span class="alert-date">July 30, 2025</span>
-                                <span class="alert-title">Abnormal Usages</span>
+                    <!-- Left Column: Alerts List -->
+                    <div class="alerts-list-panel">
+                        <h2>Recent Alerts</h2>
+                        
+                        <!-- New Alert (Highlighted) -->
+                        <a href="#alert1" class="alert-link-wrapper">
+                            <div class="alert-item new-alert">
+                                <div class="alert-details">
+                                    <span class="alert-date">July 30, 2025</span>
+                                    <span class="alert-title">Abnormal Usages</span>
+                                </div>
+                                <div class="alert-actions">
+                                    <input type="checkbox" class="select-checkbox">
+                                    <input type="checkbox" id="star-1" class="star-input">
+                                    <label for="star-1" class="star-label" onclick="event.stopPropagation(); alert('Added to bookmark. (Demo)');">☆</label>
+                                    <span class="trash-icon" onclick="event.stopPropagation(); alert('Delete this alert? (Demo)');">🗑️</span>
+                                </div>
                             </div>
-                            <div class="alert-actions">
-                                <input type="checkbox" class="read-checkbox">
-                                <input type="checkbox" id="star-1" class="star-input">
-                                <label for="star-1" class="star-label">☆</label>
-                                <span class="view-icon">👁️</span>
+                        </a>
+                        
+                        <!-- Old Alerts -->
+                        <a href="#alert2" class="alert-link-wrapper">
+                            <div class="alert-item">
+                                <div class="alert-details">
+                                    <span class="alert-date">July 15, 2025</span>
+                                    <span class="alert-title">Weekly Summary</span>
+                                </div>
+                                <div class="alert-actions">
+                                    <input type="checkbox" class="select-checkbox">
+                                    <input type="checkbox" id="star-2" class="star-input">
+                                    <label for="star-2" class="star-label" onclick="event.stopPropagation(); alert('Added to bookmark. (Demo)');">☆</label>
+                                    <span class="trash-icon" onclick="event.stopPropagation(); alert('Delete this alert? (Demo)');">🗑️</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#alert3" class="alert-link-wrapper">
+                            <div class="alert-item">
+                                <div class="alert-details">
+                                    <span class="alert-date">June 21, 2025</span>
+                                    <span class="alert-title">Pay Bill</span>
+                                </div>
+                                <div class="alert-actions">
+                                    <input type="checkbox" class="select-checkbox">
+                                    <input type="checkbox" id="star-3" class="star-input">
+                                    <label for="star-3" class="star-label" onclick="event.stopPropagation(); alert('Added to bookmark. (Demo)');">☆</label>
+                                    <span class="trash-icon" onclick="event.stopPropagation(); alert('Delete this alert? (Demo)');">🗑️</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#alert4" class="alert-link-wrapper">
+                            <div class="alert-item">
+                                <div class="alert-details">
+                                    <span class="alert-date">May 19, 2025</span>
+                                    <span class="alert-title">Abnormal Usages</span>
+                                </div>
+                                <div class="alert-actions">
+                                    <input type="checkbox" class="select-checkbox">
+                                    <input type="checkbox" id="star-4" class="star-input">
+                                    <label for="star-4" class="star-label" onclick="event.stopPropagation(); alert('Added to bookmark. (Demo)');">☆</label>
+                                    <span class="trash-icon" onclick="event.stopPropagation(); alert('Delete this alert? (Demo)');">🗑️</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#alert5" class="alert-link-wrapper">
+                            <div class="alert-item">
+                                <div class="alert-details">
+                                    <span class="alert-date">May 10, 2025</span>
+                                    <span class="alert-title">New Tips for Renters</span>
+                                </div>
+                                <div class="alert-actions">
+                                    <input type="checkbox" class="select-checkbox">
+                                    <input type="checkbox" id="star-5" class="star-input">
+                                    <label for="star-5" class="star-label" onclick="event.stopPropagation(); alert('Added to bookmark. (Demo)');">☆</label>
+                                    <span class="trash-icon" onclick="event.stopPropagation(); alert('Delete this alert? (Demo)');">🗑️</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Right Column: Alert Detail Panels -->
+                    <div class="alert-detail-panels">
+                        <div class="alert-info" id="alert1">
+                            <div class="info-content">
+                                <h3>Abnormal Usages</h3>
+                                <p>Usage up 30% this week, air conditioner is the main driver.</p>
+                                <p>👉 Check <a href="usage.html">Electricity Usage</a> for details.</p>
+                                <a href="#" class="btn-secondary">Close</a>
                             </div>
                         </div>
-                    </a>
-                    
-                    <!-- Old Alerts -->
-                    <a href="#alert2" class="alert-link-wrapper">
-                        <div class="alert-item">
-                            <div class="alert-details">
-                                <span class="alert-date">July 15, 2025</span>
-                                <span class="alert-title">Weekly Summary</span>
-                            </div>
-                            <div class="alert-actions">
-                                <input type="checkbox" class="read-checkbox" checked>
-                                <input type="checkbox" id="star-2" class="star-input">
-                                <label for="star-2" class="star-label">☆</label>
-                                <span class="view-icon">👁️</span>
+                        
+                        <div class="alert-info" id="alert2">
+                            <div class="info-content">
+                                <h3>Weekly Summary</h3>
+                                <p>Your weekly summary has been generated.</p>
+                                <p><a href="#">👉 Click here to view</a></p>
+                                <a href="#" class="btn-secondary">Close</a>
                             </div>
                         </div>
-                    </a>
-                    
-                    <a href="#alert3" class="alert-link-wrapper">
-                        <div class="alert-item">
-                            <div class="alert-details">
-                                <span class="alert-date">June 21, 2025</span>
-                                <span class="alert-title">Pay Bill</span>
-                            </div>
-                            <div class="alert-actions">
-                                <input type="checkbox" class="read-checkbox" checked>
-                                <input type="checkbox" id="star-3" class="star-input">
-                                <label for="star-3" class="star-label">☆</label>
-                                <span class="view-icon">👁️</span>
+                        
+                        <div class="alert-info" id="alert3">
+                            <div class="info-content">
+                                <h3>Bill Reminder</h3>
+                                <p>This is a reminder that your bill is due.</p>
+                                <a href="#" class="btn-secondary">Close</a>
                             </div>
                         </div>
-                    </a>
-                    
-                    <a href="#alert4" class="alert-link-wrapper">
-                        <div class="alert-item">
-                            <div class="alert-details">
-                                <span class="alert-date">May 19, 2025</span>
-                                <span class="alert-title">Abnormal Usages</span>
-                            </div>
-                            <div class="alert-actions">
-                                <input type="checkbox" class="read-checkbox" checked>
-                                <input type="checkbox" id="star-4" class="star-input">
-                                <label for="star-4" class="star-label">☆</label>
-                                <span class="view-icon">👁️</span>
+                        
+                        <div class="alert-info" id="alert4">
+                            <div class="info-content">
+                                <h3>Abnormal Usages</h3>
+                                <p>Usage up 24% this week, air conditioner is the main driver.</p>
+                                <p>👉 Check <a href="usage.html">Electricity Usage</a> for details.</p>
+                                <a href="#" class="btn-secondary">Close</a>
                             </div>
                         </div>
-                    </a>
-                    
-                    <a href="#alert5" class="alert-link-wrapper">
-                        <div class="alert-item">
-                            <div class="alert-details">
-                                <span class="alert-date">May 10, 2025</span>
-                                <span class="alert-title">New Tips for Renters</span>
+                        
+                        <div class="alert-info" id="alert5">
+                            <div class="info-content">
+                                <h3>New Tips for Renters!</h3>
+                                <p>If you are interested in improving your rent savings, check out these <a href="index.html#new-support">👉 Tips!</a></p>
+                                <a href="#" class="btn-secondary">Close</a>
                             </div>
-                            <div class="alert-actions">
-                                <input type="checkbox" class="read-checkbox" checked>
-                                <input type="checkbox" id="star-5" class="star-input">
-                                <label for="star-5" class="star-label">☆</label>
-                                <span class="view-icon">👁️</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- Right Column: Alert Detail Panels -->
-                <div class="alert-detail-panels">
-                    <div class="alert-info" id="alert1">
-                        <div class="popup-content">
-                            <h3>Abnormal Usages</h3>
-                            <p>Usage up 30% this week, air conditioner is the main driver.</p>
-                            <p>Check <a href="usage.html">Electricity Usage</a> for details.</p>
-                            <a href="#" class="close-button">Close</a>
                         </div>
                     </div>
                     
-                    <div class="alert-info" id="alert2">
-                        <div class="popup-content">
-                            <h3>Weekly Summary</h3>
-                            <p>Your weekly summary has been generated.</p>
-                            <p><a href="#">Click here to view</a></p>
-                            <a href="#" class="close-button">Close</a>
-                        </div>
-                    </div>
-                    
-                    <div class="alert-info" id="alert3">
-                        <div class="popup-content">
-                            <h3>Bill Reminder</h3>
-                            <p>This is a reminder that your bill is due.</p>
-                            <a href="#" class="close-button">Close</a>
-                        </div>
-                    </div>
-                    
-                    <div class="alert-info" id="alert4">
-                        <div class="popup-content">
-                            <h3>Abnormal Usages</h3>
-                            <p>Usage up 24% this week, air conditioner is the main driver.</p>
-                            <p>Check <a href="usage.html">Electricity Usage</a> for details.</p>
-                            <a href="#" class="close-button">Close</a>
-                        </div>
-                    </div>
-                    
-                    <div class="alert-info" id="alert5">
-                        <div class="popup-content">
-                            <h3>New Tips for Renters!</h3>
-                            <p>If you are interested in improving your rent savings, check out these <a href="#">Tips!</a></p>
-                            <a href="#" class="close-button">Close</a>
-                        </div>
-                    </div>
                 </div>
             </div>
             
-            <!-- Notification Settings Card -->
-            <div class="card">
-                <h2>Notification Settings</h2>
-                
-                <div class="notification-settings-list">
-                    <div class="notification-item">
-                        <input type="checkbox" id="abnormalWarning" checked>
-                        <label for="abnormalWarning">Abnormal usage warning (ON by default)</label>
-                    </div>
-                    <div class="notification-item">
-                        <input type="checkbox" id="billReminder" checked>
-                        <label for="billReminder">Bill payment reminder</label>
-                    </div>
-                    <div class="notification-item">
-                        <input type="checkbox" id="weeklySummary" checked>
-                        <label for="weeklySummary">Weekly usage summary</label>
-                    </div>
-                    <div class="notification-item">
-                        <input type="checkbox" id="newTips" checked>
-                        <label for="newTips">New tips / Government assistance program</label>
-                    </div>
-                </div>
-                
-                <h3>Notification Method</h3>
-                <div class="notification-method">
-                    <label><input type="radio" name="notifyMethod" value="push"> Push</label>
-                    <label><input type="radio" name="notifyMethod" value="email"> Email</label>
-                    <label><input type="radio" name="notifyMethod" value="both" checked> Both</label>
-                </div>
+            <!-- Bulk actions - fixed at bottom of card -->
+            <div class="bulk-actions">
+                <button class="btn-delete-selected" onclick="event.stopPropagation(); alert('Delete selected alert? (Demo)');">🗑️ Delete Selected</button>
+                <button class="btn-secondary" onclick="event.stopPropagation(); alert('Bookmark selected alert? (Demo)');">⭐ Star Selected</button>
+                <button class="btn-secondary" onclick="event.stopPropagation(); alert('All alerts selected. (Demo)');">☑️ Select All</button>
+                <button class="btn-secondary" onclick="event.stopPropagation(); alert('No alert selected. (Demo)');">☐ Deselect All</button>
             </div>
         </div>
-    </main>
-
-    
+        
+        <!-- Notification Settings Card -->
+        <div class="card">
+            <h2>Notification Settings</h2>
+            
+            <div class="notification-settings-list">
+                <div class="notification-item">
+                    <input type="checkbox" id="abnormalWarning" checked>
+                    <label for="abnormalWarning">Abnormal usage warning (ON by default)</label>
+                </div>
+                <div class="notification-item">
+                    <input type="checkbox" id="billReminder" checked>
+                    <label for="billReminder">Bill payment reminder</label>
+                </div>
+                <div class="notification-item">
+                    <input type="checkbox" id="weeklySummary" checked>
+                    <label for="weeklySummary">Weekly usage summary</label>
+                </div>
+                <div class="notification-item">
+                    <input type="checkbox" id="newTips" checked>
+                    <label for="newTips">New tips / Government assistance program</label>
+                </div>
+            </div>
+            
+            <h3>Notification Method</h3>
+            <div class="notification-method">
+                <label><input type="radio" name="notifyMethod" value="push"> Push</label>
+                <label><input type="radio" name="notifyMethod" value="email"> Email</label>
+                <label><input type="radio" name="notifyMethod" value="both" checked> Both</label>
+            </div>
+        </div>
+        
+    </div>
+</main>
     <!-- ============================================
          MOBILE BOTTOM NAVIGATION BAR
          Visible on mobile only
@@ -248,8 +261,9 @@
         </div>
     </footer>
 
-    <!-- Active page highlighting (automatically highlights current page) -->
     <script>
+        <!-- Active page highlighting (automatically highlights current page) -->
+
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         
         // Highlight bottom navigation
@@ -265,6 +279,25 @@
                 link.classList.add('active');
             }
         });
+
+       // Alerts page: Show first alert by default if no alert is selected
+        function showDefaultAlert() {
+            // Show first alert by default on both mobile and desktop
+            if (!window.location.hash || window.location.hash === '#') {
+                window.location.hash = '#alert1';
+            }
+        }
+
+        // Run on page load
+        showDefaultAlert();
+
+        // Run when window is resized (in case layout changes)
+        window.addEventListener('resize', function() {
+            if (!window.location.hash || window.location.hash === '#') {
+                window.location.hash = '#alert1';
+            }
+        });
+
     </script>
     
 </body>

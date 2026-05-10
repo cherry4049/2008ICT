@@ -49,11 +49,144 @@
         <div class="container">
             <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
             <section class="section">
-                <div class="card">            
-
-                    <p style="color: red;">[Add your page content here.]</p>
-                    <p style="color: red";>[Add your page specific css to style.css section 10.2]</p>
-
+                <div class="card" id="mainCard">
+                    <div class="alert_lrg_tablet">
+                        <!-- Users alert history -->            
+                        <h2>Recent Alerts</h2>
+                            <!-- Highlighted New Alert -->
+                        <a href="#alert1" class="alert_link">
+                            <div class="alert" id="newAlert">
+                                <div class="alert_details">
+                                    <p>July 30, 2025</p>
+                                    <p>Abnormal Usages</p>
+                                </div>
+                                <div class="alert_actions">
+                                    <input type="checkbox">
+                                    <input type="checkbox" id="star-1" class="star_input">
+                                    <label for="star-1" class="star">☆</label>
+                                    <p>👁️</p>   
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Old alerts -->
+                        <a href="#alert2" class="alert_link">
+                            <div class="alert">
+                                <div class="alert_details">
+                                    <p>July 15, 2025</p>
+                                    <p>Weekly Summary</p>
+                                </div>
+                                <div class="alert_actions">
+                                    <input type="checkbox" checked>
+                                    <input type="checkbox" id="star-2" class="star_input">
+                                    <label for="star-2" class="star">☆</label>
+                                    <p>👁️</p>   
+                                </div>                      
+                            </div>
+                        </a>
+                        <a href="#alert3" class="alert_link">
+                            <div class="alert">
+                                <div class="alert_details">
+                                    <p>June 21, 2025</p>
+                                    <p>Pay Bill</p>
+                                </div>
+                                <div class="alert_actions">
+                                    <input type="checkbox" checked>
+                                    <input type="checkbox" id="star-3" class="star_input">
+                                    <label for="star-3" class="star">☆</label>
+                                    <p>👁️</p>   
+                                </div>  
+                            </div>
+                        </a>
+                        <a href="#alert4" class="alert_link">
+                            <div class="alert">
+                                <div class="alert_details">
+                                    <p>May 19, 2025</p>
+                                    <p>Abnormal Usages</p>
+                                </div>
+                                <div class="alert_actions">
+                                    <input type="checkbox" checked>
+                                    <input type="checkbox" id="star-4" class="star_input">
+                                    <label for="star-4" class="star">☆</label>
+                                    <p>👁️</p>   
+                                </div>       
+                            </div>
+                        </a>
+                        <a href="#alert5" class="alert_link">
+                            <div class="alert">
+                                <div class="alert_details">
+                                    <p>10 May, 2025</p>
+                                    <p>New Tips for Renters</p>
+                                </div>
+                                <div class="alert_actions">
+                                    <input type="checkbox" checked>
+                                    <input type="checkbox" id="star-5" class="star_input">
+                                    <label for="star-5" class="star">☆</label>
+                                    <p>👁️</p>   
+                                </div> 
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Alert more info-->
+                     <div class="alert_more_info">
+                        <div class="alert_info" id="alert1">
+                            <div class="popup_content">
+                                <h3 style="color: #dec954;">Abnormal Usages</h3>
+                                <p>Usage up 30% this week, air conditioner is the main driver.</p>
+                                <p>Check <a href="usage.html">Electricity Usage</a> for details.</p>
+                                <a href="#" class="closeButton">Close</a>
+                            </div>
+                        </div>
+                        <div class="alert_info" id="alert2">
+                            <div class="popup_content">
+                                <h3 style="color: #dec954;">Weekly Summary</h3>
+                                <p>Your weekly summary has been generated.</p>
+                                <p>Please click <a href="">Here</a> To View.</p>
+                                <a href="#" class="closeButton">Close</a>
+                            </div>
+                        </div>
+                        <div class="alert_info" id="alert3">
+                            <div class="popup_content">
+                                <h3 style="color: #dec954;">Bill Reminder</h3>
+                                <p>This is a reminder that your bill is due.</p>
+                                <a href="#" class="closeButton">Close</a>
+                            </div>
+                        </div>
+                        <div class="alert_info" id="alert4">
+                            <div class="popup_content">
+                                <h3 style="color: #dec954;">Abnormal Usages</h3>
+                                <p>Usage up 24% this week, air conditioner is the main driver.</p>
+                                <p>Check <a href="usage.html">Electricity Usage</a> for details.</p>
+                                <a href="#" class="closeButton">Close</a>
+                            </div>
+                        </div>
+                        <div class="alert_info" id="alert5">
+                            <div class="popup_content">
+                                <h3 style="color: #dec954;">New Tips for Renters!</h3>
+                                <p>If you are interested in improving your rent savings, check out</p>
+                                <p>these <a href="">Tips!</a></p>
+                                <a href="#" class="closeButton">Close</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- Simple Notification settings, only using flex -->
+                    <h2>Notification Settings</h2>
+                        <div class="noti_settings">
+                            <div class="noti_item"><input type="checkbox" name="" id="" checked><p>Abnormal usage warning (ON by default)</p></div>
+                            <div class="noti_item"><input type="checkbox" name="" id="" checked><p>Bill payment Reminder</p></div>
+                            <div class="noti_item"><input type="checkbox" name="" id="" checked><p>Weekly usage summary</p></div>
+                            <div class="noti_item"><input type="checkbox" name="" id="" checked><p>New tips / Government assistance program</p></div>
+                        </div>
+                    <h3>NOTIFICATION METHOD</h3>
+                        <div class="noti_method">
+                            <input type="radio" id="Push" name="noti_method" value="Email">
+                            <label for="Push">Push</label><br>
+                            <input type="radio" id="Email" name="noti_method" value="Email">
+                            <label for="Email">Email</label><br>
+                            <input type="radio" id="javascript" name="noti_method" value="Both" checked>
+                            <label for="Both">Both</label>
+                        </div>
                 </div>
             </section>
         </div>

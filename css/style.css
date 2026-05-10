@@ -541,9 +541,127 @@ a {
        - Alerts Page Only
 ============================================ */
 
-.alerts-container { }
-.alert-detail-panel { }
-.alert-filter {  }
+/*First Section*/
+/*Alerts display in blocks, one column*/
+.card{
+    display: flex;
+    flex-direction: column; 
+    gap: var(--spacing-sm);
+}
+/*Each alerts overall design*/
+.alert{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: #dcd8d8;
+    padding:var(--spacing-sm);
+    border-radius: var(--radius-lg);
+}
+.alert_lrg_tablet{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;    
+}
+/*Each alerts interior design*/
+.alert_details{
+    grid-column: 1 / 2;
+    padding: var(--spacing-xs);
+}
+.alert_actions{
+    display: flex;
+    grid-column: 2 / 3;
+    align-items: center;
+    gap: 3.4vw;
+}
+#newAlert{
+    background-color: #FFF3B0;
+}
+/*Default hidden, unless its a popup on mobile*/
+.closeButton{
+    display: none;
+}
+.alert_link{
+    text-decoration: none;
+    color: inherit;
+}
+/*Scroll to the top when Alert is cicked*/
+.alert_info{
+    scroll-margin-top: 100vh;
+}
+/*Tablet mode, align more info to the right of the alerts*/
+@media screen and (min-width: 768px) {
+    #mainCard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .alert_lrg_tablet {
+        grid-column: 1 / 2;
+    }
+
+    .alert_more_info {
+        grid-column: 2 / 3;
+        padding: 2vw;
+        position: sticky;
+        top: 0;
+    }
+
+    .alert_info {
+        display: none;
+    }
+
+    .alert_info:target {
+        display: block;
+    }
+}
+
+/*New Alert Popup info - Only mobile*/
+@media screen and (max-width: 767px) {
+    .alert_info {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        place-items: center;
+    }
+
+    .alert_info:target {
+        display: grid;
+    }
+
+    .popup_content {
+        background: white;
+        padding: 2vh 4vw;
+        border-radius: 8px;
+    }
+
+    .closeButton {
+        display: block;
+    }
+}
+
+/*Star display*/
+.star_input {
+    display: none;
+}
+.star_input:checked + .star {
+    color: gold;
+}
+
+/*Second Section*/
+.noti_settings{ 
+    display: flex;
+    flex-direction: column;
+ }
+
+ .noti_item{
+    display: flex;
+    align-items: center;
+ }
+.noti_method{ 
+    display: flex;
+    gap: var(--spacing-xs);
+ }
+
 
 /* ============================================
    10.3 PAGE-SPECIFIC STYLES

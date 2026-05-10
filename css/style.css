@@ -656,7 +656,7 @@ a {
     cursor: pointer;
 }
 
-/* Star Rating */
+/* select item */
 .star-input {
     display: none;
 }
@@ -672,6 +672,7 @@ a {
 .star-label:hover {
     color: #ffcc00;
 }
+
 .trash-icon {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     cursor: pointer;
@@ -690,6 +691,11 @@ a {
 }
 .alert-info:target {
     display: block;
+}
+
+.info-content .btn-secondary {
+    margin-top: var(--spacing-lg);
+    display: inline-block;
 }
 
 /* Notification Settings */

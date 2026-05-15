@@ -1031,9 +1031,233 @@ a {
    10.5 PAGE-SPECIFIC STYLES
        - Help Page Only
 ============================================ */
-.faq-item {  }
-.contact-form {  }
-.chat-window {  }
+/* --- Help Page Core Layout --- */
+.help-page {
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.help-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* RESPONSIVE DESIGN: Mobile First (1 column) */
+.help-container {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr; 
+}
+
+/* RESPONSIVE DESIGN: Desktop (2 columns side-by-side) */
+@media (min-width: 768px) {
+    .help-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start; /* Prevents stretching */
+    }
+}
+
+/* --- FAQ Accordion Styles & Animations --- */
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 1rem 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+/* ANIMATION: Smooth expand/collapse */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 1rem;
+}
+
+.faq-answer.open {
+    max-height: 200px; 
+    padding-bottom: 1rem;
+}
+
+/* ANIMATION: Rotating the '+' icon */
+.faq-icon {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg); /* Turns the '+' into an 'x' */
+}
+
+/* --- Contact Form Styles & Animations --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Soft shadow to separate from background */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ANIMATION & A11Y: Form Focus States */
+textarea, select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus, select:focus {
+    border-color: #28a745; /* RentersEnergy Green */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+    outline: none;
+}
+
+/* ANIMATION: Tactile Button Press */
+.submit-btn {
+    background-color: #28a745; /* RentersEnergy Green */
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.submit-btn:active {
+    transform: scale(0.98); /* Button slightly compresses when clicked */
+}
+/* --- AI Chatbot Demo Styles --- */
+.chat-section {
+    /* On desktop, this forces the chat to span across both columns */
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto; /* Centers the chatbox nicely */
+}
+
+.chat-window {
+    height: 250px;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Base style for message bubbles */
+.chat-bubble {
+    max-width: 80%;
+    padding: 0.8rem 1rem;
+    border-radius: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    animation: popIn 0.3s ease-out forwards;
+}
+
+/* Bot messages align left */
+.bot-bubble {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+/* User messages align right */
+.user-bubble {
+    background-color: #28a745; /* RentersEnergy Green */
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+    background: #fff;
+}
+
+#chat-input {
+    flex-grow: 1;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0 0 0 8px;
+}
+
+#chat-input:focus {
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(40, 167, 69, 0.2);
+}
+
+.chat-send-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 0 8px 0;
+    transition: background-color 0.2s ease;
+}
+
+.chat-send-btn:hover {
+    background-color: #218838;
+}
+
+/* Simple animation for new messages */
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+
+
 
 /* ============================================
    11. DESKTOP OVERRIDES (768px and up)

@@ -142,6 +142,68 @@
 </body>
 </html>
 
+
+ ----- .js file for FAQ LOGIC & AI CHATBOT DEMO LOGIC ----------
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- 1. FAQ ACCORDION LOGIC ---
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const isExpanded = question.getAttribute('aria-expanded') === 'true';
+            const answer = document.getElementById(question.getAttribute('aria-controls'));
+
+            question.setAttribute('aria-expanded', !isExpanded);
+
+            if (!isExpanded) {
+                answer.classList.add('open');
+            } else {
+                answer.classList.remove('open');
+            }
+        });
+    });
+
+    // --- 2. AI CHATBOT DEMO LOGIC ---
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+    const chatWindow = document.getElementById('chat-window');
+
+    if (chatForm) {
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevents the page from refreshing
+            
+            const message = chatInput.value.trim();
+            
+            if (message !== '') {
+                // Create and append the user's message
+                const userBubble = document.createElement('div');
+                userBubble.className = 'chat-bubble user-bubble';
+                userBubble.textContent = message;
+                chatWindow.appendChild(userBubble);
+                
+                // Clear the input box
+                chatInput.value = '';
+                
+                // Auto-scroll to the bottom of the chat window
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+
+                // Simulate the AI "thinking" and replying after 1 second
+                setTimeout(() => {
+                    const botBubble = document.createElement('div');
+                    botBubble.className = 'chat-bubble bot-bubble';
+                    botBubble.textContent = "This is a prototype demo. The AI assistant is currently offline for presentation mode!";
+                    chatWindow.appendChild(botBubble);
+                    
+                    // Auto-scroll to bottom again
+                    chatWindow.scrollTop = chatWindow.scrollHeight;
+                }, 1000);
+            }
+        });
+    }
+});
+    
+
     <!-- ============================================
          MOBILE BOTTOM NAVIGATION BAR
          Visible on mobile only

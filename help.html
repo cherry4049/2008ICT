@@ -3,34 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>RentersEnergy – Help/Contact</title>
+    <meta name="description" content="Have questions about your rental energy usage? Browse our FAQs, contact the RentersEnergy team, or ask our AI assistant.">
+    <title>RentersEnergy – Help & Contact</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- ============================================
          HEADER (shared across all pages)
-         Mobile: Logo + Page Title + User Icon (row)
-                Search bar below
-         Desktop: Logo + Page Title + Search + User Icon (row)
-                 Top nav below
     ============================================ -->
     <header class="header">
-        <!-- Top row: Logo + Page Title + User Icon -->
         <div class="header-top">
             <a href="index.html" class="logo-link" data-tooltip="Go to Home Page">
                 <img src="images/logo.png" alt="RentersEnergy Logo" class="logo">
             </a>
-            <h1 class="page-title">Help / Contact</h1>
+            <h1 class="page-title">Help & Contact</h1>
             <a href="settings.html" class="user-icon" data-tooltip="Go to settings"></a>
         </div>
         
-        <!-- Search bar -->
         <div class="search-area">
             <input type="text" class="search-input" placeholder="Search...">
         </div>
         
-        <!-- Top navigation (visible on desktop only) -->
         <nav class="nav-links">
             <a href="index.html" class="nav-link" data-tooltip="Go to Home Page">🏠 Home</a>
             <a href="alerts.html" class="nav-link" data-tooltip="Go to Alerts Page">🔔 Alerts</a>
@@ -39,174 +33,127 @@
             <a href="help.html" class="nav-link" data-tooltip="Go to Help Page">❓ Help</a>
         </nav>
     </header>
-  
-
 
     <!-- ============================================
-         MAIN CONTENT
-         Each page owner adds their content here
+         MAIN CONTENT – HELP PAGE
     ============================================ -->
     <main class="main">
         <div class="container">
-            <!-- PAGE-SPECIFIC CONTENT GOES HERE -->
-            <section class="section">
-                <div class="card">
-                    <p style="color: red;">[Add your page content here.]</p>
-                    <p style="color: red;">[Add your page specific css to style.css section 10.5]</p>
-
-                </div>
-            </section>
-        </div>
-    </main>
-    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Have questions about your rental energy usage? Browse our FAQs, contact the RentersEnergy team, or ask our AI assistant.">
-    <title>Help & Contact Us | RentersEnergy Support</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main id="page" class="help-page">
-        <header class="help-header">
-            <h1>Help & Support</h1>
-            <p>Find answers to common questions, reach out to our team, or try our AI assistant.</p>
-        </header>
-
-        <div class="help-container">
-            <section class="faq-section">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq1-answer">
-                            Why is my rent/water bill higher than usual?
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div id="faq1-answer" class="faq-answer">
-                            <p>Your bill may be higher due to seasonal changes, a malfunctioning appliance, or a potential leak. Check your 'Usage Trends' tab to pinpoint the exact date the spike occurred.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" aria-expanded="false" aria-controls="faq2-answer">
-                            How do I add a new appliance?
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div id="faq2-answer" class="faq-answer">
-                            <p>Navigate to your Dashboard, click on 'Room Breakdown', select the room, and click the '+ Add Appliance' button. Enter the wattage to start tracking.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact-section">
-                <h2>Contact Us</h2>
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <select id="category" name="category" required>
-                            <option value="" disabled selected>Select an issue...</option>
-                            <option value="billing">Billing / Usage Spike</option>
-                            <option value="technical">Technical Support</option>
-                            <option value="general">General Question</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="details">Details</label>
-                        <textarea id="details" name="details" rows="6" required placeholder="Please describe your issue in detail..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </section>
-
-            <section class="chat-section">
-                <h2>RentersEnergy AI Assistant</h2>
-                <p>Try our experimental AI assistant for instant answers.</p>
-                <div class="chat-container">
-                    <div class="chat-window" id="chat-window">
-                        <div class="chat-bubble bot-bubble">
-                            Hi Emma! I'm your RentersEnergy AI. How can I help you lower your bill today?
-                        </div>
-                    </div>
-                    <form class="chat-input-area" id="chat-form">
-                        <input type="text" id="chat-input" placeholder="Type your question here..." aria-label="Chat input" autocomplete="off">
-                        <button type="submit" class="chat-send-btn" aria-label="Send message">Send</button>
-                    </form>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-
- ----- .js file for FAQ LOGIC & AI CHATBOT DEMO LOGIC ----------
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- 1. FAQ ACCORDION LOGIC ---
-    const faqQuestions = document.querySelectorAll('.faq-question');
-
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const isExpanded = question.getAttribute('aria-expanded') === 'true';
-            const answer = document.getElementById(question.getAttribute('aria-controls'));
-
-            question.setAttribute('aria-expanded', !isExpanded);
-
-            if (!isExpanded) {
-                answer.classList.add('open');
-            } else {
-                answer.classList.remove('open');
-            }
-        });
-    });
-
-    // --- 2. AI CHATBOT DEMO LOGIC ---
-    const chatForm = document.getElementById('chat-form');
-    const chatInput = document.getElementById('chat-input');
-    const chatWindow = document.getElementById('chat-window');
-
-    if (chatForm) {
-        chatForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevents the page from refreshing
             
-            const message = chatInput.value.trim();
-            
-            if (message !== '') {
-                // Create and append the user's message
-                const userBubble = document.createElement('div');
-                userBubble.className = 'chat-bubble user-bubble';
-                userBubble.textContent = message;
-                chatWindow.appendChild(userBubble);
-                
-                // Clear the input box
-                chatInput.value = '';
-                
-                // Auto-scroll to the bottom of the chat window
-                chatWindow.scrollTop = chatWindow.scrollHeight;
+            <!-- Help Header -->
+            <div class="help-header">
+                <h2>Help & Support</h2>
+                <p>📝 Find answers to common questions, reach out to our team, or try our AI assistant.</p>
+            </div>
 
-                // Simulate the AI "thinking" and replying after 1 second
-                setTimeout(() => {
-                    const botBubble = document.createElement('div');
-                    botBubble.className = 'chat-bubble bot-bubble';
-                    botBubble.textContent = "This is a prototype demo. The AI assistant is currently offline for presentation mode!";
-                    chatWindow.appendChild(botBubble);
+            <!-- Help Grid (2 columns on desktop, 1 on mobile) -->
+            <div class="help-container">
+                
+                <!-- FAQ Section -->
+                <section class="faq-section">
+                    <h2>Frequently Asked Questions:</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq1-answer">
+                                ❓ Why is my electricity bill higher than usual?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div id="faq1-answer" class="faq-answer">
+                                <p>Your bill may be higher due to seasonal changes, a malfunctioning appliance, or increased usage. Check your <a href="usage.html">Usage page</a> to pinpoint which appliance is using the most energy.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq2-answer">
+                                ❓How do I add a new appliance?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div id="faq2-answer" class="faq-answer">
+                                <p>Go to <a href="settings.html">Settings</a>, click on "Appliances", and check the boxes for appliances you have in each room.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq3-answer">
+                                ❓ How do I set up usage alerts?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div id="faq3-answer" class="faq-answer">
+                                <p>Go to the <a href="alerts.html">Alerts page</a> and toggle on "Abnormal usage warning". You'll receive notifications when your usage spikes.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq4-answer">
+                                ❓ How do I delete my account?
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div id="faq4-answer" class="faq-answer">
+                                <p>Go to <a href="settings.html">Settings</a>, scroll to the bottom, and click "Delete My Account". You'll be asked to confirm before deletion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section (Info + Form) -->
+                <section class="contact-section">
+                                        
+                    <!-- Contact Info -->                    
+                    <div class="contact-info">
+                        <h2>Contact Us:</h2>
+                        <p>📞 Phone: 1800 123 456</p>
+                        <p>✉️ Email: support@rentersenergy.com.au</p>
+                        <p>💬 Live chat available: 9am-5pm Mon-Fri</p>
+                    </div>
                     
-                    // Auto-scroll to bottom again
-                    chatWindow.scrollTop = chatWindow.scrollHeight;
-                }, 1000);
-            }
-        });
-    }
-});
-    
+                    <!-- Contact Form -->
+                    <form class="contact-form" onsubmit="showDemoMessage(); return false;">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="" disabled selected>Select an issue...</option>
+                                <option value="billing">Billing / Usage Spike</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Please describe your issue..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">👉 Send us a message</button>
+                    </form>
+                </section>
+
+                <!-- AI Chatbot Section (spans both columns on desktop) -->
+                <section class="chat-section">
+                    <h2>🤖 RentersEnergy AI Assistant</h2>
+                    <h3>Chat with our AI assistant for instant answers:</h3>
+                    <div class="chat-container">
+                        <div class="chat-window" id="chat-window">
+                            <div class="chat-bubble bot-bubble">
+                                Hi Emma! I'm your RentersEnergy AI. How can I help you lower your bill today?
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <textarea id="chat-input" placeholder="Type your question here..." rows="2" aria-label="Chat input"></textarea>
+                            <button id="chat-send-btn" class="chat-send-btn" aria-label="Send message">Send</button>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+            
+        </div>
+    </main>
 
     <!-- ============================================
          MOBILE BOTTOM NAVIGATION BAR
-         Visible on mobile only
     ============================================ -->
     <nav class="bottom-nav">
         <a href="index.html" class="bottom-nav-link" id="bottomNavHome">
@@ -236,12 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ============================================ -->
     <footer class="footer">
         <div class="container text-center">
-            <p class="small">&copy; 2026 2008ICT – Team OL1 | Renters Energy</p>
+            <p class="small">&copy; 2026 2008ICT – Team OL1 | RentersEnergy</p>
         </div>
     </footer>
 
-    <!-- Active page highlighting (automatically highlights current page) -->
     <script>
+    
+        <!-- Navigation bar: Active page highlighting (automatically highlights current page) -->
+
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         
         // Highlight bottom navigation
@@ -250,13 +199,71 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             }
         });
-        
-        // Highlight top navigation (desktop)
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
-                link.classList.add('active');
-            }
+
+        // Help page: FAQ Accordion Logic
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const isExpanded = question.getAttribute('aria-expanded') === 'true';
+                const answer = document.getElementById(question.getAttribute('aria-controls'));
+                question.setAttribute('aria-expanded', !isExpanded);
+                if (!isExpanded) {
+                    answer.classList.add('open');
+                } else {
+                    answer.classList.remove('open');
+                }
+            });
         });
+
+        // Help page: Contact Form Demo Message
+        function showDemoMessage() {
+            const name = document.getElementById('name')?.value || 'User';
+            alert(`Thank you ${name}! Your message has been sent (demo). In production, we would respond within 24 hours.`);
+            // clear the form
+            document.querySelector('.contact-form').reset();
+        }
+
+        // Help page: AI Chatbot Demo Logic
+        const chatInput = document.getElementById('chat-input'); //The text box where user types their question
+        const chatSendBtn = document.getElementById('chat-send-btn'); //The Send button user clicks
+        const chatWindow = document.getElementById('chat-window'); //The container that displays all messages
+
+        function addMessage(text, isUser) {
+            const bubble = document.createElement('div'); //Creates a new <div> element for the message bubble
+            bubble.className = `chat-bubble ${isUser ? 'user-bubble' : 'bot-bubble'}`; //Adds CSS classes to style the bubble
+            bubble.textContent = text; //Puts the message text inside the bubble
+            chatWindow.appendChild(bubble); //Adds the bubble to the chat window
+            chatWindow.scrollTop = chatWindow.scrollHeight; //Auto-scrolls to the bottom so new messages are visible
+        }
+
+        function sendMessage() {
+            const message = chatInput.value.trim(); //Removes spaces so empty messages aren't sent
+            if (message === '') return;
+            
+            addMessage(message, true); //Shows what user typed
+            chatInput.value = ''; //Clears input box for next message
+            chatInput.style.height = 'auto';  // Resets height after clearing
+            
+            setTimeout(() => {
+                addMessage("This is a demo. In production, our AI would provide personalised energy-saving advice based on your usage data.", false); // Shows bot response
+            }, 800); //Creates realistic delay (AI "thinking")
+        }
+
+        // Auto-resize textarea
+        chatInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        });
+
+        if (chatSendBtn) {
+            chatSendBtn.addEventListener('click', sendMessage);
+        }
+        
+        if (chatInput) {
+            chatInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') sendMessage();
+            });
+        }
     </script>
     
 </body>

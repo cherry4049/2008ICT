@@ -58,7 +58,89 @@
             </section>
         </div>
     </main>
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Have questions about your rental energy usage? Browse our FAQs, contact the RentersEnergy team, or ask our AI assistant.">
+    <title>Help & Contact Us | RentersEnergy Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="page" class="help-page">
+        <header class="help-header">
+            <h1>Help & Support</h1>
+            <p>Find answers to common questions, reach out to our team, or try our AI assistant.</p>
+        </header>
 
+        <div class="help-container">
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq1-answer">
+                            Why is my rent/water bill higher than usual?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq1-answer" class="faq-answer">
+                            <p>Your bill may be higher due to seasonal changes, a malfunctioning appliance, or a potential leak. Check your 'Usage Trends' tab to pinpoint the exact date the spike occurred.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq2-answer">
+                            How do I add a new appliance?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div id="faq2-answer" class="faq-answer">
+                            <p>Navigate to your Dashboard, click on 'Room Breakdown', select the room, and click the '+ Add Appliance' button. Enter the wattage to start tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2>Contact Us</h2>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>Select an issue...</option>
+                            <option value="billing">Billing / Usage Spike</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Details</label>
+                        <textarea id="details" name="details" rows="6" required placeholder="Please describe your issue in detail..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+
+            <section class="chat-section">
+                <h2>RentersEnergy AI Assistant</h2>
+                <p>Try our experimental AI assistant for instant answers.</p>
+                <div class="chat-container">
+                    <div class="chat-window" id="chat-window">
+                        <div class="chat-bubble bot-bubble">
+                            Hi Emma! I'm your RentersEnergy AI. How can I help you lower your bill today?
+                        </div>
+                    </div>
+                    <form class="chat-input-area" id="chat-form">
+                        <input type="text" id="chat-input" placeholder="Type your question here..." aria-label="Chat input" autocomplete="off">
+                        <button type="submit" class="chat-send-btn" aria-label="Send message">Send</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <!-- ============================================
          MOBILE BOTTOM NAVIGATION BAR
